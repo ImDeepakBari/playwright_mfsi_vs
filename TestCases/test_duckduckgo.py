@@ -1,11 +1,7 @@
-from PageObjectModel.search import DuckDuckSearchPage
-from PageObjectModel.results import ResultDuckDuckpage
 from playwright.sync_api import Page, expect
 
 
-def test_duckduckgo_search_page(page: Page):
-    search_page = DuckDuckSearchPage(page)
-    result_page = ResultDuckDuckpage(page)
+def test_duckduckgo_search_page(page: Page, search_page, result_page):
 
     # Given the duckduckgo page is displayed
     search_page.load_page()
